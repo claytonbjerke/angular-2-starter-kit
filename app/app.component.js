@@ -9,13 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var TwitterAccount = (function () {
+    function TwitterAccount() {
+    }
+    return TwitterAccount;
+}());
+exports.TwitterAccount = TwitterAccount;
 var AppComponent = (function () {
     function AppComponent() {
+        this.title = 'Angular 2 Starter Kit';
+        this.twitter = {
+            id: 1,
+            handle: 'claytonbjerke'
+        };
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h5>hi lol!</h5>'
+            template: "\n      <h3>{{title}}</h3>\n      <h5>Twitter Acount:</h5>\n      <div>ID: {{twitter.id}}</div>\n      <div>HANDLE: @{{twitter.handle}}</div>\n      <div>\n        <label>EDIT HANDLE: </label>\n        <input [(ngModel)]=\"twitter.handle\" placeholder=\"@twitterhandle\">\n      </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
